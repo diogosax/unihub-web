@@ -9,11 +9,11 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="text-xl font-extrabold text-blue-700 tracking-tight hover:text-blue-800 transition-colors"
+          className="text-lg font-extrabold tracking-tight text-blue-800 hover:text-blue-900 transition-colors"
         >
           UniHub
         </Link>
@@ -23,7 +23,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className="text-sm font-medium text-gray-600 hover:text-blue-700 transition-colors"
+              className="text-sm font-semibold text-gray-600 hover:text-blue-800 transition-colors"
             >
               {label}
             </Link>
@@ -32,7 +32,7 @@ export default function Header() {
 
         <a
           href="#"
-          className="text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 transition-colors px-5 py-2 rounded-lg"
+          className="text-sm font-semibold text-white bg-blue-800 hover:bg-blue-900 transition-colors px-5 py-2 rounded"
         >
           Entrar
         </a>
