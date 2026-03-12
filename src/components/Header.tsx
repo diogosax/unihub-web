@@ -9,18 +9,21 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="w-full border-b border-gray-200 bg-white">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-blue-600 tracking-tight">
+    <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <Link
+          href="/"
+          className="text-xl font-extrabold text-blue-700 tracking-tight hover:text-blue-800 transition-colors"
+        >
           UniHub
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+              className="text-sm font-medium text-gray-600 hover:text-blue-700 transition-colors"
             >
               {label}
             </Link>
@@ -29,7 +32,7 @@ export default function Header() {
 
         <a
           href="#"
-          className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors px-4 py-2 rounded-lg"
+          className="text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 transition-colors px-5 py-2 rounded-lg"
         >
           Entrar
         </a>
