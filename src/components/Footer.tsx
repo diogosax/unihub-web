@@ -64,7 +64,7 @@ export default function Footer() {
           <Link
             href="/contato"
             className="text-sm font-semibold hover:text-white transition-colors"
-            style={{ color: "#46B4E3" }}
+            style={{ color: "#45b6e5" }}
           >
             Agendar demonstração
           </Link>

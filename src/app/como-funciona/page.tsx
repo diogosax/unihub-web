@@ -46,10 +46,13 @@ export default function ComoFunciona() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#292E7F] text-white">
+      <section
+        className="text-white"
+        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-[#46B4E3] mb-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-white/80 mb-4">
               Ecossistema UniHub
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
@@ -76,7 +79,7 @@ export default function ComoFunciona() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#E41663] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#e22664] mb-3">
               Alunos
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32]">
@@ -95,7 +98,7 @@ export default function ComoFunciona() {
               >
                 <div
                   className="w-1 h-8 rounded mb-4"
-                  style={{ backgroundColor: "#E41663" }}
+                  style={{ backgroundColor: "#e22664" }}
                 />
                 <h3 className="font-bold text-[#2d2e32] text-sm mb-2">{f.title}</h3>
                 <p className="text-sm text-[#2d2e32]/70 leading-relaxed">{f.description}</p>
@@ -118,7 +121,7 @@ export default function ComoFunciona() {
             />
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-[#46B4E3] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-3">
               UniHub Analytics
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32] mb-5 leading-snug">
@@ -132,7 +135,7 @@ export default function ComoFunciona() {
             <Link
               href="/contato"
               className="inline-block px-6 py-2.5 font-bold rounded text-sm text-white transition-colors"
-              style={{ backgroundColor: "#46B4E3" }}
+              style={{ backgroundColor: "#e22664" }}
             >
               Solicitar acesso
             </Link>
@@ -144,7 +147,7 @@ export default function ComoFunciona() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#46B4E3] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-3">
               Gestores
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32]">
@@ -159,7 +162,7 @@ export default function ComoFunciona() {
               >
                 <div
                   className="w-1 h-8 rounded mb-4"
-                  style={{ backgroundColor: "#46B4E3" }}
+                  style={{ backgroundColor: "#45b6e5" }}
                 />
                 <h3 className="font-bold text-[#2d2e32] text-sm mb-2">{f.title}</h3>
                 <p className="text-sm text-[#2d2e32]/70 leading-relaxed">{f.description}</p>
@@ -170,7 +173,10 @@ export default function ComoFunciona() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#292E7F] text-white">
+      <section
+        className="py-16 text-white"
+        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
             Veja o ecossistema UniHub em ação
@@ -182,7 +188,7 @@ export default function ComoFunciona() {
           <Link
             href="/contato"
             className="inline-block px-8 py-3.5 bg-white font-bold rounded text-sm hover:bg-gray-100 transition-colors"
-            style={{ color: "#292E7F" }}
+            style={{ color: "#e22664" }}
           >
             Agende uma demonstração
           </Link>

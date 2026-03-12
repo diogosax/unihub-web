@@ -11,25 +11,25 @@ const certPartners = [
 
 const features = [
   {
-    accent: "#E41663",
+    accent: "#e22664",
     title: "Educação sob medida",
     description:
       "Oferecemos uma ampla gama de cursos com o conteúdo cuidadosamente desenvolvido para diferentes atividades e posições dentro da sua empresa. Além disso, produzimos cursos específicos para suprir demandas exclusivas de cada organização.",
   },
   {
-    accent: "#46B4E3",
+    accent: "#45b6e5",
     title: "Programa de Carreiras",
     description:
       "Organizamos nossos cursos em formatos de carreiras, permitindo que os alunos se tornem completamente capacitados em profissões como designer digital, desenvolvedor de sistemas, redes e infraestrutura e marketing digital.",
   },
   {
-    accent: "#F1AA1E",
+    accent: "#eead32",
     title: "Solução para Skill Gaps",
     description:
       "Nossas soluções são projetadas para solucionar skill gaps, nivelando o conhecimento técnico e certificando equipes inteiras. Capacite seus colaboradores e aumente a eficiência e produtividade da sua empresa.",
   },
   {
-    accent: "#292E7F",
+    accent: "#e22664",
     title: "Certificações Internacionais",
     description:
       "Nossos cursos proporcionam uma ampla variedade de certificações internacionais emitidas pelas principais empresas de software profissional: Autodesk, Adobe, Microsoft, Apple e PMI.",
@@ -85,10 +85,13 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="bg-[#292E7F] text-white overflow-hidden">
+      <section
+        className="text-white overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-[#46B4E3] mb-4">
+            <p className="text-sm font-bold uppercase tracking-widest text-white/80 mb-4">
               Educação Corporativa Interativa
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
@@ -102,7 +105,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/como-funciona"
-                className="px-7 py-3 font-bold rounded text-sm text-[#292E7F] bg-white hover:bg-gray-100 transition-colors"
+                className="px-7 py-3 font-bold rounded text-sm text-[#e22664] bg-white hover:bg-gray-100 transition-colors"
               >
                 Saiba mais
               </Link>
@@ -129,7 +132,7 @@ export default function Home() {
       {/* ── Certificações Internacionais ── */}
       <section className="py-14 bg-[#f7f7f7] border-b border-[#e8e8e8]">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-[#292E7F] mb-8">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-8">
             Certificações Internacionais
           </p>
           <div className="flex flex-wrap items-center justify-center gap-10 grayscale opacity-70">
@@ -186,7 +189,7 @@ export default function Home() {
       <section className="py-20 bg-[#f7f7f7]">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-[#E41663] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#e22664] mb-3">
               Plataforma
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32] mb-5 leading-snug">
@@ -210,7 +213,7 @@ export default function Home() {
             <Link
               href="/carreiras"
               className="inline-block px-6 py-2.5 font-bold rounded text-sm text-white transition-colors"
-              style={{ backgroundColor: "#E41663" }}
+              style={{ backgroundColor: "#e22664" }}
             >
               Conhecer cursos
             </Link>
@@ -233,7 +236,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#292E7F] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-3">
               Soluções Completas para Empresas
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32]">
@@ -250,14 +253,14 @@ export default function Home() {
                 key={plan.name}
                 className={`rounded-lg border p-8 flex flex-col gap-5 ${
                   plan.highlight
-                    ? "border-[#292E7F] shadow-lg"
+                    ? "border-[#e22664] shadow-lg"
                     : "border-[#e8e8e8]"
                 }`}
               >
                 {plan.highlight && (
                   <span
                     className="text-xs font-bold uppercase tracking-wider text-white rounded px-2.5 py-1 w-fit"
-                    style={{ backgroundColor: "#292E7F" }}
+                    style={{ backgroundColor: "#e22664" }}
                   >
                     Mais popular
                   </span>
@@ -277,9 +280,9 @@ export default function Home() {
                   className={`w-full text-center px-6 py-2.5 rounded font-bold text-sm transition-colors ${
                     plan.highlight
                       ? "text-white"
-                      : "text-[#292E7F] border border-[#292E7F] hover:bg-[#292E7F] hover:text-white"
+                      : "text-[#e22664] border border-[#e22664] hover:bg-[#e22664] hover:text-white"
                   }`}
-                  style={plan.highlight ? { backgroundColor: "#292E7F" } : {}}
+                  style={plan.highlight ? { backgroundColor: "#e22664" } : {}}
                 >
                   {plan.cta}
                 </Link>
@@ -290,7 +293,10 @@ export default function Home() {
       </section>
 
       {/* ── CTA final ── */}
-      <section className="py-20 bg-[#292E7F] text-white">
+      <section
+        className="py-20 text-white"
+        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             Vamos Conversar
@@ -302,7 +308,7 @@ export default function Home() {
           <Link
             href="/contato"
             className="inline-block px-8 py-3.5 bg-white font-bold rounded text-sm hover:bg-gray-100 transition-colors"
-            style={{ color: "#292E7F" }}
+            style={{ color: "#e22664" }}
           >
             Agende uma demonstração
           </Link>

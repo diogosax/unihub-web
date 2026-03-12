@@ -27,7 +27,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className="text-sm font-semibold text-[#2d2e32] hover:text-[#E41663] transition-colors"
+              className="text-sm font-semibold text-[#2d2e32] hover:text-[#e22664] transition-colors"
             >
               {label}
             </Link>
@@ -37,7 +37,7 @@ export default function Header() {
         <a
           href="#"
           className="text-sm font-bold text-white px-5 py-2 rounded transition-colors"
-          style={{ backgroundColor: "#292E7F" }}
+          style={{ backgroundColor: "#e22664" }}
         >
           Entrar
         </a>

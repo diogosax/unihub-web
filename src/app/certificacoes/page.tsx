@@ -38,9 +38,12 @@ export default function Certificacoes() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#292E7F] text-white py-20">
+      <section
+        className="text-white py-20"
+        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#F1AA1E] mb-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-white/80 mb-4">
             Certificações Internacionais
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
@@ -96,7 +99,7 @@ export default function Certificacoes() {
       <section className="py-20 bg-[#f7f7f7]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#F1AA1E] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#eead32] mb-3">
               Por que certificar sua equipe
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32] mb-5 leading-snug">
@@ -114,7 +117,7 @@ export default function Certificacoes() {
             <Link
               href="/contato"
               className="inline-block px-6 py-2.5 font-bold rounded text-sm text-white transition-colors"
-              style={{ backgroundColor: "#292E7F" }}
+              style={{ backgroundColor: "#e22664" }}
             >
               Falar com nossa equipe
             </Link>

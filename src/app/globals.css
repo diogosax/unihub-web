@@ -3,11 +3,11 @@
 @theme inline {
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 
-  /* UniHub brand palette — extracted from backup CSS and logo SVGs */
-  --color-brand-pink:    #E41663;
-  --color-brand-blue:    #46B4E3;
-  --color-brand-yellow:  #F1AA1E;
-  --color-brand-indigo:  #292E7F;
+  /* UniHub brand palette */
+  --color-brand-pink:    #e22664;
+  --color-brand-blue:    #45b6e5;
+  --color-brand-yellow:  #eead32;
+  --color-brand-indigo:  #2c8fbe;
 
   /* Dark/neutral */
   --color-dark:    #2d2e32;

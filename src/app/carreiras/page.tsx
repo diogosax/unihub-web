@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const carreiras = [
   {
-    accent: "#E41663",
+    accent: "#e22664",
     name: "Designer Digital",
     description:
       "O designer digital é o arquiteto da experiência do usuário, o profissional por trás da primeira impressão que sua marca deixa no mundo online. Com seu talento, cria não apenas interfaces, imagens ou ilustrações atraentes, mas experiências cativantes que fidelizam clientes.",
@@ -13,7 +13,7 @@ const carreiras = [
     ],
   },
   {
-    accent: "#46B4E3",
+    accent: "#45b6e5",
     name: "Desenvolvedor de Sistemas",
     description:
       "Desenvolvedores capacitados são essenciais para a transformação digital das empresas. Formamos profissionais completos em desenvolvimento web, mobile e de sistemas, preparados para os desafios do mercado de tecnologia.",
@@ -24,7 +24,7 @@ const carreiras = [
     ],
   },
   {
-    accent: "#F1AA1E",
+    accent: "#eead32",
     name: "Administração",
     description:
       "Profissionais de administração com conhecimento técnico atualizado são fundamentais para o funcionamento eficiente de qualquer organização. Nossas trilhas cobrem as principais áreas de gestão.",
@@ -75,9 +75,12 @@ export default function Carreiras() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#292E7F] text-white py-20">
+      <section
+        className="text-white py-20"
+        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#46B4E3] mb-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-white/80 mb-4">
             Programa de Carreiras
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
@@ -95,7 +98,7 @@ export default function Carreiras() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#E41663] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#e22664] mb-3">
               Trilhas de Carreira
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32]">
@@ -152,7 +155,7 @@ export default function Carreiras() {
       <section className="py-20 bg-[#f7f7f7]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#292E7F] mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-3">
               Essentials
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#2d2e32]">
@@ -167,7 +170,7 @@ export default function Carreiras() {
             {essentials.map((e) => (
               <div
                 key={e.name}
-                className="rounded-lg border border-[#e8e8e8] p-6 bg-white hover:border-[#292E7F]/30 hover:shadow-sm transition-all"
+                className="rounded-lg border border-[#e8e8e8] p-6 bg-white hover:border-[#e22664]/30 hover:shadow-sm transition-all"
               >
                 <h3 className="font-bold text-[#2d2e32] text-sm mb-2">{e.name}</h3>
                 <p className="text-sm text-[#2d2e32]/70 leading-relaxed">{e.description}</p>
@@ -178,7 +181,7 @@ export default function Carreiras() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#E41663] text-white">
+      <section className="py-16 bg-[#e22664] text-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
             Pronto para capacitar sua equipe?
@@ -190,7 +193,7 @@ export default function Carreiras() {
           <Link
             href="/contato"
             className="inline-block px-8 py-3.5 bg-white font-bold rounded text-sm hover:bg-gray-100 transition-colors"
-            style={{ color: "#E41663" }}
+            style={{ color: "#e22664" }}
           >
             Falar com especialista
           </Link>

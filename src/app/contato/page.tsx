@@ -4,9 +4,12 @@ export default function Contato() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#292E7F] text-white py-20">
+      <section
+        className="text-white py-20"
+        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#46B4E3] mb-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-white/80 mb-4">
             Fale Conosco
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
@@ -123,7 +126,7 @@ export default function Contato() {
               <button
                 type="submit"
                 className="w-full px-6 py-3 font-bold rounded text-sm text-white transition-colors"
-                style={{ backgroundColor: "#E41663" }}
+                style={{ backgroundColor: "#e22664" }}
               >
                 Enviar mensagem
               </button>
@@ -150,7 +153,7 @@ export default function Contato() {
                 <a
                   href="tel:+5508005917345"
                   className="text-sm font-bold transition-colors"
-                  style={{ color: "#292E7F" }}
+                  style={{ color: "#e22664" }}
                 >
                   +55 0800 591 7345
                 </a>
@@ -163,14 +166,14 @@ export default function Contato() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-bold transition-colors"
-                  style={{ color: "#46B4E3" }}
+                  style={{ color: "#45b6e5" }}
                 >
                   UniHub Educação no LinkedIn
                 </a>
               </div>
             </div>
 
-            <div className="rounded-lg p-6" style={{ backgroundColor: "#292E7F" }}>
+            <div className="rounded-lg p-6" style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}>
               <p className="font-bold text-white text-sm mb-2">
                 Tempo de resposta
               </p>
