@@ -2,11 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 
 const certPartners = [
-  { name: "Swift", src: "/brand/logo-swift.svg", width: 80 },
-  { name: "Microsoft", src: "/brand/logo-microsoft.svg", width: 110 },
-  { name: "PMI", src: "/brand/logo-pmi.svg", width: 70 },
-  { name: "Autodesk", src: "/brand/logo-autodesk.svg", width: 100 },
-  { name: "Adobe", src: "/brand/logo-adobe.svg", width: 80 },
+  { name: "Swift", src: "/brand/logo-swift.svg", width: 100 },
+  { name: "Microsoft", src: "/brand/logo-microsoft.svg", width: 140 },
+  { name: "PMI", src: "/brand/logo-pmi.svg", width: 88 },
+  { name: "Autodesk", src: "/brand/logo-autodesk.svg", width: 126 },
+  { name: "Adobe", src: "/brand/logo-adobe.svg", width: 100 },
+];
+
+const howItWorksSteps = [
+  {
+    number: "01",
+    title: "Diagnóstico da equipe",
+    description:
+      "Avaliamos as necessidades da sua organização e mapeamos os skill gaps existentes para definir a trilha de capacitação mais adequada.",
+  },
+  {
+    number: "02",
+    title: "Trilhas de aprendizado",
+    description:
+      "Cada colaborador recebe uma trilha personalizada com aulas de até 45 minutos, acompanhamento de gestores e gamificação integrada.",
+  },
+  {
+    number: "03",
+    title: "Certificação e resultados",
+    description:
+      "Ao concluir os cursos, colaboradores recebem certificações internacionais reconhecidas pelo mercado e gestores acompanham os resultados em tempo real.",
+  },
 ];
 
 const features = [
@@ -87,33 +108,37 @@ export default function Home() {
       {/* ── Hero ── */}
       <section
         className="text-white overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #45b6e5, #2c8fbe)" }}
+        style={{
+          background: "linear-gradient(135deg, #45b6e5, #2c8fbe)",
+          minHeight: "65vh",
+        }}
       >
-        <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-6 py-14 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[65vh]">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-white/80 mb-4">
               Educação Corporativa Interativa
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-              UniHub chegou para transformar a Educação Corporativa
+              A plataforma que transforma educação corporativa em vantagem
+              competitiva
             </h1>
             <p className="text-lg text-white/80 leading-relaxed mb-8">
-              Descubra como nossos programas de educação corporativa podem elevar o seu
-              negócio e como sua equipe pode atingir seu potencial através de uma
-              variedade de cursos profissionalizantes.
+              Programas de capacitação, trilhas de carreira e certificações
+              internacionais para empresas que querem evoluir sua equipe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/como-funciona"
-                className="px-7 py-3 font-bold rounded text-sm text-[#e22664] bg-white hover:bg-gray-100 transition-colors"
+                href="/contato"
+                className="px-7 py-3 font-bold rounded text-sm text-white transition-colors"
+                style={{ backgroundColor: "#e22664" }}
               >
-                Saiba mais
+                Agendar demonstração
               </Link>
               <Link
-                href="/contato"
-                className="px-7 py-3 font-bold rounded text-sm text-white border border-white/40 hover:bg-white/10 transition-colors"
+                href="/como-funciona"
+                className="px-7 py-3 font-bold rounded text-sm text-white border border-white/50 hover:bg-white/10 transition-colors"
               >
-                Agende uma demonstração
+                Saiba mais
               </Link>
             </div>
           </div>
@@ -129,21 +154,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Como funciona — 3 passos ── */}
+      <section className="py-16 bg-white border-b border-[#e8e8e8]">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-10">
+            Como funciona
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {howItWorksSteps.map((step) => (
+              <div key={step.number} className="flex flex-col gap-4">
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-extrabold shrink-0"
+                  style={{ backgroundColor: "#e22664" }}
+                >
+                  {step.number}
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#2d2e32] text-base mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-[#2d2e32]/70 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Certificações Internacionais ── */}
       <section className="py-14 bg-[#f7f7f7] border-b border-[#e8e8e8]">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-8">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-10">
             Certificações Internacionais
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-10 grayscale opacity-70">
+          <div className="flex flex-wrap items-center justify-center gap-12 grayscale opacity-60">
             {certPartners.map((p) => (
               <Image
                 key={p.name}
                 src={p.src}
                 alt={p.name}
                 width={p.width}
-                height={40}
-                className="h-8 w-auto object-contain"
+                height={56}
+                className="h-12 md:h-14 w-auto object-contain"
               />
             ))}
           </div>
@@ -151,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* ── Transformando empresas ── */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#2d2e32] mb-5">
@@ -186,7 +240,7 @@ export default function Home() {
       </section>
 
       {/* ── Cursos para Carreiras do Futuro ── */}
-      <section className="py-20 bg-[#f7f7f7]">
+      <section className="py-24 bg-[#f7f7f7]">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[#e22664] mb-3">
@@ -233,7 +287,7 @@ export default function Home() {
       </section>
 
       {/* ── Planos ── */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-xs font-bold uppercase tracking-widest text-[#45b6e5] mb-3">
