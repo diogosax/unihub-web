@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-montserrat",
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "UniHub — Formação Profissional para o Mercado de Hoje",
+  title: "UniHub • Educação Corporativa Interativa",
   description:
-    "A UniHub é uma plataforma de educação profissional que conecta estudantes a cursos práticos e empresas que contratam.",
+    "Descubra como sua empresa pode se tornar mais inovadora, eficiente e produtiva com os programas de educação corporativa interativa e cursos profissionalizantes da UniHub.",
 };
 
 export default function RootLayout({
@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={plusJakarta.variable}>
-      <body className="font-sans antialiased flex flex-col min-h-screen bg-white text-gray-900">
+    <html lang="pt-BR" className={montserrat.variable}>
+      <body className="font-sans antialiased flex flex-col min-h-screen bg-white text-[#2d2e32]">
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

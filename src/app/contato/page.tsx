@@ -1,161 +1,182 @@
-import { Mail, Building2, GraduationCap } from "lucide-react";
-
-const contactMethods = [
-  {
-    icon: Mail,
-    title: "E-mail",
-    description: "contato@unihub.com.br", // TODO: replace with real email
-  },
-  {
-    icon: Building2,
-    title: "Para empresas",
-    description:
-      "Quer capacitar sua equipe ou tornar-se parceiro? Mencione que representa uma empresa no formulário.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Para estudantes",
-    description:
-      "Dúvidas sobre cursos, metodologia ou acesso à plataforma? Nossa equipe responde em até 1 dia útil.",
-  },
-];
+"use client";
 
 export default function Contato() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-blue-900 text-white py-20">
+      <section className="bg-[#292E7F] text-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <span className="text-xs font-bold uppercase tracking-widest text-blue-300">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#46B4E3] mb-4">
             Fale Conosco
-          </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-3 mb-5 leading-tight">
-            Estamos aqui para ajudar
+          </p>
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+            Vamos começar!
           </h1>
-          <p className="text-blue-200 text-base max-w-xl mx-auto leading-relaxed">
-            Seja você um estudante com dúvidas sobre os cursos ou uma empresa interessada
-            em soluções corporativas, nossa equipe está pronta para conversar.
+          <p className="text-white/80 text-base max-w-2xl mx-auto leading-relaxed">
+            Descubra como a UniHub Educação pode ser a sua parceira na jornada de
+            capacitação e otimização de equipes. Entre em contato conosco e leve
+            sua equipe para o próximo nível.
           </p>
         </div>
       </section>
 
-      {/* Formulário + Info */}
+      {/* Form + Info */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14">
-          {/* Formulário */}
+          {/* Form */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-2">Envie uma mensagem</h2>
-            <p className="text-sm text-gray-500 mb-7">
-              Preencha o formulário e nossa equipe retornará em até 1 dia útil.
+            <h2 className="text-xl font-extrabold text-[#2d2e32] mb-2">Fale conosco</h2>
+            <p className="text-sm text-[#2d2e32]/60 mb-7">
+              Preencha o formulário e nossa equipe retornará o mais rápido possível.
             </p>
             <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="name" className="text-sm font-semibold text-gray-700">
-                  Nome completo
+                <label htmlFor="name" className="text-sm font-semibold text-[#2d2e32]">
+                  Nome
                 </label>
                 <input
                   id="name"
                   type="text"
                   placeholder="Seu nome"
-                  className="border border-gray-300 rounded px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-transparent transition"
+                  className="border border-[#e8e8e8] rounded px-4 py-3 text-sm text-[#2d2e32] placeholder-[#2d2e32]/30 focus:outline-none focus:ring-2 focus:border-transparent transition"
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="email" className="text-sm font-semibold text-gray-700">
+                <label htmlFor="company" className="text-sm font-semibold text-[#2d2e32]">
+                  Nome da Empresa
+                </label>
+                <input
+                  id="company"
+                  type="text"
+                  placeholder="Sua empresa"
+                  className="border border-[#e8e8e8] rounded px-4 py-3 text-sm text-[#2d2e32] placeholder-[#2d2e32]/30 focus:outline-none focus:ring-2 focus:border-transparent transition"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="email" className="text-sm font-semibold text-[#2d2e32]">
                   E-mail
                 </label>
                 <input
                   id="email"
                   type="email"
                   placeholder="seu@email.com"
-                  className="border border-gray-300 rounded px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-transparent transition"
+                  className="border border-[#e8e8e8] rounded px-4 py-3 text-sm text-[#2d2e32] placeholder-[#2d2e32]/30 focus:outline-none focus:ring-2 focus:border-transparent transition"
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="type" className="text-sm font-semibold text-gray-700">
-                  Você é
+                <label htmlFor="phone" className="text-sm font-semibold text-[#2d2e32]">
+                  Telefone
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="+55 (00) 00000-0000"
+                  className="border border-[#e8e8e8] rounded px-4 py-3 text-sm text-[#2d2e32] placeholder-[#2d2e32]/30 focus:outline-none focus:ring-2 focus:border-transparent transition"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="employees" className="text-sm font-semibold text-[#2d2e32]">
+                  Quantidade de colaboradores
                 </label>
                 <select
-                  id="type"
+                  id="employees"
                   defaultValue=""
-                  className="border border-gray-300 rounded px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-transparent transition bg-white"
+                  className="border border-[#e8e8e8] rounded px-4 py-3 text-sm text-[#2d2e32] focus:outline-none focus:ring-2 focus:border-transparent transition bg-white"
                 >
                   <option value="" disabled>
-                    Selecione uma opção
+                    Selecione uma faixa
                   </option>
-                  <option value="student">Estudante / Profissional</option>
-                  <option value="company">Empresa / RH</option>
-                  <option value="other">Outro</option>
+                  <option value="1-19">1 a 19 colaboradores</option>
+                  <option value="20-99">20 a 99 colaboradores</option>
+                  <option value="100+">Mais de 100 colaboradores</option>
                 </select>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="subject" className="text-sm font-semibold text-gray-700">
-                  Assunto
+                <label htmlFor="website" className="text-sm font-semibold text-[#2d2e32]">
+                  Website da empresa
                 </label>
                 <input
-                  id="subject"
-                  type="text"
-                  placeholder="Ex: Dúvida sobre cursos"
-                  className="border border-gray-300 rounded px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-transparent transition"
+                  id="website"
+                  type="url"
+                  placeholder="https://suaempresa.com.br"
+                  className="border border-[#e8e8e8] rounded px-4 py-3 text-sm text-[#2d2e32] placeholder-[#2d2e32]/30 focus:outline-none focus:ring-2 focus:border-transparent transition"
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="message" className="text-sm font-semibold text-gray-700">
+                <label htmlFor="message" className="text-sm font-semibold text-[#2d2e32]">
                   Mensagem
                 </label>
                 <textarea
                   id="message"
-                  rows={5}
-                  placeholder="Escreva sua mensagem aqui..."
-                  className="border border-gray-300 rounded px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-transparent transition resize-none"
+                  rows={4}
+                  placeholder="Como podemos ajudar a sua empresa?"
+                  className="border border-[#e8e8e8] rounded px-4 py-3 text-sm text-[#2d2e32] placeholder-[#2d2e32]/30 focus:outline-none focus:ring-2 focus:border-transparent transition resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="px-6 py-3 bg-blue-800 text-white font-bold rounded hover:bg-blue-900 transition-colors text-sm w-full"
+                className="w-full px-6 py-3 font-bold rounded text-sm text-white transition-colors"
+                style={{ backgroundColor: "#E41663" }}
               >
                 Enviar mensagem
               </button>
             </form>
           </div>
 
-          {/* Informações de contato */}
+          {/* Contact info */}
           <div className="flex flex-col gap-8">
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-2">Informações de contato</h2>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Prefere entrar em contato diretamente? Use os canais abaixo.
+              <h2 className="text-xl font-extrabold text-[#2d2e32] mb-2">
+                Canais de Comunicação
+              </h2>
+              <p className="text-sm text-[#2d2e32]/60 leading-relaxed">
+                Você também pode entrar em contato conosco através dos nossos canais de
+                comunicação e redes sociais.
               </p>
             </div>
 
             <div className="flex flex-col gap-4">
-              {contactMethods.map(({ icon: Icon, title, description }) => (
-                <div
-                  key={title}
-                  className="flex items-start gap-4 rounded border border-gray-200 p-5 bg-white"
+              <div className="rounded-lg border border-[#e8e8e8] p-5 bg-white">
+                <p className="font-semibold text-[#2d2e32] text-sm mb-1">
+                  Telefone Comercial
+                </p>
+                <a
+                  href="tel:+5508005917345"
+                  className="text-sm font-bold transition-colors"
+                  style={{ color: "#292E7F" }}
                 >
-                  <div className="w-9 h-9 rounded bg-blue-50 flex items-center justify-center shrink-0">
-                    <Icon size={18} strokeWidth={1.75} className="text-blue-800" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900 text-sm mb-0.5">{title}</p>
-                    <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
-                  </div>
-                </div>
-              ))}
+                  +55 0800 591 7345
+                </a>
+              </div>
+
+              <div className="rounded-lg border border-[#e8e8e8] p-5 bg-white">
+                <p className="font-semibold text-[#2d2e32] text-sm mb-1">LinkedIn</p>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-bold transition-colors"
+                  style={{ color: "#46B4E3" }}
+                >
+                  UniHub Educação no LinkedIn
+                </a>
+              </div>
             </div>
 
-            <div className="bg-[#f5f7fb] border border-gray-200 rounded p-6">
-              <p className="text-sm font-semibold text-gray-900 mb-1">Tempo de resposta</p>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Nossa equipe responde todas as mensagens em até{" "}
-                <strong className="text-gray-700">1 dia útil</strong>. Para urgências,
-                mencione no assunto da mensagem.
+            <div className="rounded-lg p-6" style={{ backgroundColor: "#292E7F" }}>
+              <p className="font-bold text-white text-sm mb-2">
+                Tempo de resposta
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Nossa equipe entra em contato o mais rápido possível para ajudar com suas
+                dúvidas ou solicitações. Para urgências, mencione no campo de mensagem.
               </p>
             </div>
           </div>

@@ -1,23 +1,22 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 
-  /* UniHub brand palette (best-effort — confirm against real brand assets) */
-  --color-brand-900: #0f2d6b;
-  --color-brand-800: #153580;
-  --color-brand-700: #1a3f96;
-  --color-brand-600: #1f4aaa;
-  --color-brand-500: #2557c7;
-  --color-brand-100: #dce8ff;
-  --color-brand-50:  #f0f5ff;
+  /* UniHub brand palette — extracted from backup CSS and logo SVGs */
+  --color-brand-pink:    #E41663;
+  --color-brand-blue:    #46B4E3;
+  --color-brand-yellow:  #F1AA1E;
+  --color-brand-indigo:  #292E7F;
 
-  --color-surface:   #f5f7fb;
-  --color-border:    #e4e9f0;
+  /* Dark/neutral */
+  --color-dark:    #2d2e32;
+  --color-surface: #f7f7f7;
+  --color-border:  #e8e8e8;
 }
 
 body {
   font-family: var(--font-sans);
-  color: #111827;
+  color: #2d2e32;
   background-color: #ffffff;
 }
