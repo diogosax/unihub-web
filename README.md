@@ -1,190 +1,238 @@
-# UniHub Web
+# UniHub Website
 
-Website institucional da **UniHub**, plataforma de formação profissional voltada para capacitação prática e preparação para o mercado de trabalho.
+Official website for **UniHub**, rebuilt with **Next.js** and deployed on **Vercel**.
 
-Este repositório contém o **site público institucional**.  
-A plataforma educacional (login dos alunos) roda em um sistema separado.
-
----
-
-# Objetivo do projeto
-
-Criar um site institucional moderno, rápido e fácil de manter que:
-
-- apresente os cursos da UniHub
-- explique a proposta educacional
-- permita contato comercial
-- direcione alunos para a plataforma de ensino
-
-O site **não hospeda o sistema educacional**.  
-Ele funciona como **landing + marketing site**.
+This project replaces the previous website hosted on **Duda**, with the goal of reducing recurring platform costs while preserving performance, SEO, visual identity, and commercial effectiveness.
 
 ---
 
-# Stack tecnológica
+## Project Goal
 
-O projeto segue o mesmo padrão dos sites da Sax:
+Rebuild the UniHub institutional website using a modern web stack while keeping the strongest parts of the legacy site:
 
-- **Next.js (App Router)**
+- brand identity
+- service and course positioning
+- educational value proposition
+- sales-oriented structure
+- SEO and marketing foundations
+
+The legacy Duda site is stored in this repository as a **reference backup** and must be treated as a source of inspiration only, not as implementation code.
+
+---
+
+## Current Stack
+
+- **Next.js** (App Router)
 - **TypeScript**
-- **TailwindCSS**
-- **Vercel (deploy)**
-- **GitHub (versionamento)**
-
-Objetivo da stack:
-
-- velocidade
-- baixo custo
-- deploy automático
-- manutenção simples
+- **Tailwind CSS**
+- **Vercel**
+- **GitHub**
 
 ---
 
-# Arquitetura do site
+## Repository Purpose
 
-Estrutura planejada de páginas:
+This repository is the main codebase for the new UniHub website.
 
-/
-Home
+It includes:
 
-/cursos
-Lista de cursos disponíveis
-
-/sobre
-Sobre a UniHub
-
-/empresas
-Treinamentos corporativos
-
-/contato
-Formulário de contato
+- the current Next.js application
+- the legacy Duda backup for reference
+- project context for design and implementation decisions
 
 ---
 
-# Integrações externas
+## Legacy Reference
 
-A UniHub possui uma **plataforma educacional separada**.
+The folder `unihub-backup/` contains a structured export of the previous UniHub website from Duda.
 
-O botão **Login** redireciona para:
+It is included only as a **reference source** for:
 
-https://app.unihub.com
-(ajustar se necessário)
+- homepage structure
+- visual hierarchy
+- marketing copy
+- course and service positioning
+- illustrations
+- logos and trust elements
+- general brand direction
 
----
+### Important
 
-# Estrutura do projeto
-src
-├── app
-│   ├── page.tsx
-│   ├── cursos
-│   ├── sobre
-│   ├── empresas
-│   └── contato
-│
-├── components
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── CourseCard.tsx
-│   └── CTA.tsx
-│
-└── styles
+The Duda code must **not** be copied literally into the new application.
 
----
+Do **not** reuse:
 
-# Padrões de desenvolvimento
+- Duda runtime scripts
+- Duda widgets
+- Duda-specific layout/runtime logic
+- legacy implementation patterns
 
-Este projeto segue algumas premissas importantes:
+Use the backup only to extract:
 
-### 1 — Simplicidade
-Evitar complexidade desnecessária.  
-Este é um site institucional, não uma aplicação.
-
-### 2 — Reuso de componentes
-Componentes devem ser reutilizáveis.
-
-### 3 — Performance
-Evitar bibliotecas pesadas ou scripts externos desnecessários.
-
-### 4 — SEO
-Todas as páginas devem possuir:
-
-- title
-- description
-- OpenGraph
-- estrutura semântica
-
-### 5 — Mobile first
-O site deve funcionar perfeitamente em mobile.
+- content
+- hierarchy
+- section order
+- messaging
+- design cues
+- available assets
 
 ---
 
-# Deploy
+## Key Legacy Files
 
-Deploy automático via **Vercel**.
+### Homepage reference
+- `unihub-backup/Pages/home/index.html`
+- `unihub-backup/Pages/home/style.css`
 
-Fluxo:
-commit → push → deploy automático
-
-Branch `main` é produção.
+### Main visual assets
+Reference images and illustrations are available in:
+- `unihub-backup/Resources/images/`
 
 ---
 
-# Manutenção
+## Business Context
 
-Este site é mantido pela equipe da **SAX Group**.
+UniHub is an institutional and marketing website for the UniHub brand.
 
-Atualizações são feitas via:
+Its goals are to:
+
+- present courses and training tracks
+- explain how UniHub works
+- support commercial and institutional positioning
+- capture leads and contact opportunities
+- direct users to the educational platform when needed
+
+### Important
+
+This website is **not** the student platform itself.
+
+The learning platform runs separately.
+
+The website should function as:
+- institutional presence
+- marketing website
+- landing structure for courses and corporate training
+
+---
+
+## Planned Information Architecture
+
+Main page structure currently expected:
+
+- `/` — Home
+- `/cursos` — Courses
+- `/sobre` — About UniHub
+- `/empresas` — Corporate training
+- `/contato` — Contact
+
+This can evolve if the legacy backup suggests a better structure.
+
+---
+
+## External Integration
+
+UniHub has a separate educational platform.
+
+The **Login** button should redirect users to:
+
+- `https://app.unihub.com`
+
+Adjust later if needed.
+
+---
+
+## Development Workflow
+
+This project follows a collaborative workflow across planning and implementation.
+
+### Strategy and architecture
+Handled through:
+- Diogo Santana
+- ChatGPT
+
+Typical responsibilities:
+- project direction
+- site structure
+- content strategy
+- UX and business positioning
+- technical planning
+
+### Code implementation
+Handled through:
+- Claude Code
+
+Typical responsibilities:
+- frontend implementation
+- component architecture
+- Tailwind styling
+- responsive behavior
+- page reconstruction from approved references
+
+---
+
+## Language Rules
+
+To keep the workflow consistent:
+
+- **Strategic discussions:** Portuguese
+- **Technical prompts for Claude:** English
+- **Code:** English
+- **Commit messages:** English
+- **Website content/UI:** Portuguese
+
+---
+
+## Rebuild Principles
+
+The new website should:
+
+- feel modern, educational, and trustworthy
+- be fully responsive
+- preserve strong commercial and institutional clarity
+- use clean semantic HTML
+- prioritize performance
+- be easy to expand into internal pages later
+- avoid dependence on old builder/platform patterns
+
+---
+
+## SEO and Content Expectations
+
+All major pages should be prepared for:
+
+- strong titles
+- descriptions
+- semantic structure
+- Open Graph support
+- future landing page expansion
+
+---
+
+## Deploy
+
+Deploy is handled through **Vercel**.
+
+Flow:
+commit → push → automatic deploy
+
+Branch `main` is production.
+
+---
+
+## Maintenance
+
+This site is maintained by the **SAX Group** team.
+
+Updates are handled via:
 
 - GitHub
 - Vercel
-- CI automático
+- controlled iteration with ChatGPT and Claude Code
 
 ---
 
-# Projetos relacionados
+## Related Projects
 
 - SAX Group website
 - Office Today website
 - UniHub education platform
-
-
-
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
