@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "outline" | "white";
+type Variant = "primary" | "secondary" | "outline" | "ghost" | "white";
 
 interface ButtonProps {
   href: string;
@@ -11,15 +11,17 @@ interface ButtonProps {
   className?: string;
 }
 
-const variantClasses: Record<Variant, string> = {
+const styles: Record<Variant, string> = {
   primary:
-    "bg-brand-pink text-white hover:bg-brand-pink/90",
+    "bg-brand-primary text-white hover:bg-brand-primary/90",
   secondary:
-    "bg-brand-indigo text-white hover:bg-brand-indigo/90",
+    "bg-brand-pink text-white hover:bg-brand-pink/90",
   outline:
-    "border-2 border-brand-indigo text-brand-indigo hover:bg-brand-indigo hover:text-white",
+    "border-2 border-brand-primary text-brand-primary bg-white hover:bg-brand-primary hover:text-white",
+  ghost:
+    "text-brand-primary hover:underline",
   white:
-    "bg-white text-brand-indigo hover:bg-gray-100",
+    "bg-white text-brand-primary hover:bg-gray-100",
 };
 
 export default function Button({
@@ -30,19 +32,18 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center px-6 py-3 rounded font-bold text-sm transition-colors";
-  const classes = `${base} ${variantClasses[variant]} ${className}`;
+    "inline-flex items-center justify-center px-6 py-3 rounded-md font-bold text-sm transition-all duration-200";
+  const cls = `${base} ${styles[variant]} ${className}`;
 
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
         {children}
       </a>
     );
   }
-
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={cls}>
       {children}
     </Link>
   );

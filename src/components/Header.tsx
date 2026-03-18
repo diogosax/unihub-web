@@ -131,7 +131,7 @@ export default function Header() {
             href="https://app.unihub.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-bold text-white px-5 py-2 rounded bg-brand-indigo hover:bg-brand-indigo/90 transition-colors"
+            className="text-sm font-bold text-white px-5 py-2 rounded bg-brand-primary hover:bg-brand-primary/90 transition-colors"
           >
             Entrar
           </a>
@@ -210,7 +210,7 @@ export default function Header() {
             href="https://app.unihub.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 text-sm font-bold text-white text-center px-5 py-2.5 rounded bg-brand-indigo hover:bg-brand-indigo/90 transition-colors"
+            className="mt-2 text-sm font-bold text-white text-center px-5 py-2.5 rounded bg-brand-primary hover:bg-brand-primary/90 transition-colors"
           >
             Entrar na plataforma
           </a>

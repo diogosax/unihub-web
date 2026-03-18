@@ -3,20 +3,23 @@
 @theme inline {
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-  /* UniHub brand palette — extracted from backup CSS and logo SVGs */
-  --color-brand-pink:    #E41663;
-  --color-brand-blue:    #46B4E3;
-  --color-brand-yellow:  #F1AA1E;
-  --color-brand-indigo:  #292E7F;
+  /* UniHub brand palette */
+  --color-brand-primary: #1a73e8;   /* True blue — primary CTA / links */
+  --color-brand-pink:    #E41663;   /* Accent / secondary CTA */
+  --color-brand-teal:    #46B4E3;   /* Light blue accent */
+  --color-brand-yellow:  #F1AA1E;   /* Warm accent */
+  --color-brand-indigo:  #292E7F;   /* Deep navy — footer, secondary */
 
-  /* Dark/neutral */
-  --color-dark:    #2d2e32;
-  --color-surface: #f7f7f7;
-  --color-border:  #e8e8e8;
+  /* Neutrals */
+  --color-dark:    #313131;         /* Primary text (Duda charcoal) */
+  --color-muted:   #646464;         /* Body / supporting text */
+  --color-surface: #f7f8fa;         /* Soft page background */
+  --color-blue-tint: #eef4ff;       /* Distinctive section bg */
+  --color-border:  #e4e7ec;         /* Borders / dividers */
 }
 
 body {
   font-family: var(--font-sans);
-  color: #2d2e32;
+  color: #313131;
   background-color: #ffffff;
 }

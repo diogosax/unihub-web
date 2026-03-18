@@ -1,113 +1,130 @@
 import Image from "next/image";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 
-const features = [
+const studentFeatures = [
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-        <line x1="12" y1="12" x2="12" y2="16" />
-        <line x1="10" y1="14" x2="14" y2="14" />
-      </svg>
-    ),
-    title: "Cursos corporativos completos",
-    description:
-      "Oferecemos cursos adaptados para posições individuais, equipes e até setores inteiros da sua organização.",
-    color: "#E41663",
+    title: "Dashboard personalizado",
+    body: "Cada aluno inicia com um painel que mostra trilhas, cursos e progresso — retomando exatamente do ponto onde parou.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-        <path d="M16 3.5l1.5 1.5L20 2" />
-      </svg>
-    ),
-    title: "Certificações internacionais",
-    description:
-      "Certifique sua equipe com as principais certificações do mercado: Autodesk, Adobe, Microsoft, Apple e PMI.",
-    color: "#46B4E3",
+    title: "Gamificação e conquistas",
+    body: "Boletim digital, recompensas e selos visíveis nos certificados emitidos ao concluir cada curso.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8M12 17v4" />
-      </svg>
-    ),
-    title: "Plataforma 100% online",
-    description:
-      "Nossa plataforma elimina a necessidade de materiais físicos ou presença presencial. Aprenda de qualquer lugar.",
-    color: "#F1AA1E",
+    title: "Interação com orientadores",
+    body: "Ambiente interativo com instrutores para esclarecer dúvidas e receber orientações acadêmicas de forma ágil.",
+  },
+];
+
+const managerFeatures = [
+  {
+    title: "Overview de engajamento",
+    body: "Dashboard dedicado com métricas resumidas de todos os colaboradores cadastrados — de fácil leitura e interpretação.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <circle cx="12" cy="12" r="9" />
-        <polyline points="12 7 12 12 15 15" />
-      </svg>
-    ),
-    title: "Aulas de até 45 minutos",
-    description:
-      "Aulas eficientes com duração máxima de 45 minutos, garantindo aprendizado conveniente e produtivo.",
-    color: "#292E7F",
+    title: "Gestão de trilhas",
+    body: "Crie e personalize trilhas de aprendizado por função, equipe ou departamento, alinhadas aos objetivos da empresa.",
+  },
+  {
+    title: "Relatórios e análise",
+    body: "Ferramentas para gerar relatórios sobre engajamento, presença, progresso e tempo de uso — ajustando trilhas em tempo real.",
   },
 ];
 
 export default function PlatformFeaturesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="plataforma">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <SectionHeading
-            eyebrow="Plataforma"
-            title="Elevando habilidades técnicas"
-            subtitle="Descubra como podemos ajudar a sua empresa a desenvolver posições, equipes ou até setores inteiros por meio de programas educativos de alta qualidade."
-          />
+
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-brand-primary mb-3">
+            Ecossistema UniHub
+          </p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-dark leading-tight mb-4">
+            Experiência completa para alunos e gestores
+          </h2>
+          <p className="text-muted leading-relaxed">
+            Uma plataforma desenhada para dois perfis essenciais — o colaborador em
+            aprendizado e o gestor que precisa de visibilidade e controle.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="bg-surface rounded-lg border border-border p-6 flex flex-col gap-4"
-            >
-              <div style={{ color: f.color }}>{f.icon}</div>
-              <h3 className="font-bold text-dark text-sm leading-snug">{f.title}</h3>
-              <p className="text-xs text-dark/60 leading-relaxed">{f.description}</p>
+        {/* Two panels */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+          {/* Student panel */}
+          <div className="bg-blue-tint rounded-2xl p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-extrabold text-dark">Experiência do Aluno</h3>
             </div>
-          ))}
+
+            <div className="space-y-4 mb-7">
+              {studentFeatures.map((f) => (
+                <div key={f.title} className="flex gap-3">
+                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-brand-primary shrink-0" />
+                  <div>
+                    <p className="text-sm font-bold text-dark mb-0.5">{f.title}</p>
+                    <p className="text-xs text-muted leading-relaxed">{f.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-xl overflow-hidden border border-brand-primary/20 shadow-sm">
+              <Image
+                src="/images/platform-hero.svg"
+                alt="Dashboard do aluno — UniHub"
+                width={560}
+                height={340}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Manager panel */}
+          <div className="bg-surface rounded-2xl p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-8 rounded-lg bg-brand-pink flex items-center justify-center text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                </svg>
+              </div>
+              <h3 className="text-base font-extrabold text-dark">Experiência do Gestor</h3>
+            </div>
+
+            <div className="space-y-4 mb-7">
+              {managerFeatures.map((f) => (
+                <div key={f.title} className="flex gap-3">
+                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-brand-pink shrink-0" />
+                  <div>
+                    <p className="text-sm font-bold text-dark mb-0.5">{f.title}</p>
+                    <p className="text-xs text-muted leading-relaxed">{f.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image
+                src="/images/platform-manager.png"
+                alt="Dashboard do gestor — UniHub Analytics"
+                width={900}
+                height={540}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-          <div className="flex justify-center">
-            <Image
-              src="/images/section-features.svg"
-              alt="Habilidades técnicas em evolução"
-              width={420}
-              height={340}
-              className="w-full max-w-sm"
-            />
-          </div>
-          <div>
-            <h3 className="text-xl font-extrabold text-dark mb-4">
-              Cursos para Carreiras do Futuro
-            </h3>
-            <p className="text-dark/65 leading-relaxed mb-4">
-              Além dos cursos por área, oferecemos idiomas como inglês corporativo e
-              treinamento em ferramentas essenciais para design, desenvolvimento e
-              gerenciamento de projetos.
-            </p>
-            <p className="text-dark/65 leading-relaxed mb-8">
-              Explore nossos cursos e capacite sua equipe para alcançar o seu potencial,
-              impulsionando o sucesso do seu negócio.
-            </p>
-            <Button href="/carreiras" variant="primary">
-              Conheça nossos cursos
-            </Button>
-          </div>
+        <div className="text-center mt-12">
+          <Button href="/como-funciona" variant="outline">
+            Ver como funciona a plataforma
+          </Button>
         </div>
       </div>
     </section>
