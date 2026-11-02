@@ -1,22 +1,21 @@
-# UniHub: visão e limites
+# UniHub: scope and boundaries
 
-## Identidade
+## Identity
 
-- Repositório: https://github.com/diogosax/unihub-web
-- Papel: site institucional.
-- Base GitHub inspecionada: `main`.
-- Objetivo: Site educacional e comercial da UniHub; a plataforma de alunos é separada.
+- Repository: https://github.com/diogosax/unihub-web
+- Role: institutional website.
+- Inspected GitHub base branch: `main`.
+- Purpose: UniHub educational and commercial website; the student platform is separate.
 
-## Relação entre plataforma e site
+## Platform and website relationship
 
-Este é o site institucional. Uma plataforma correspondente não foi identificada no inventário acessível; não inferir que ela não existe em outro serviço ou conta.
+This repository owns the institutional website. A corresponding platform repository was not identified in the accessible inventory; that does not establish its absence from another account or service.
 
-## Limites específicos
+## Project-specific boundaries
 
-- Não copiar runtime, widgets ou scripts Duda.
-- Direcionamento à plataforma de alunos é distinto de implementá-la neste site.
-- Repositório público: publicar apenas informação apropriada ao site.
+- Do not copy Duda runtime code, widgets or scripts.
+- Linking to the student platform is separate from implementing it in this website.
+- This repository is public; include only content appropriate for the public website.
+## Evidence and interpretation
 
-## Evidência e interpretação
-
-Separar sempre: **código observado**, **resultado de teste registrado**, **decisão do proprietário**, **proposta** e **pendência**. Existência de rota, texto comercial, dependência ou script não prova operação em produção. Não copiar claims, identidade, preços ou autorizações de outra marca.
+Always distinguish **observed code**, **recorded test results**, **owner decisions**, **proposals** and **open questions**. A route, marketing statement, dependency or script does not establish live operation. Do not copy claims, identity, pricing or authorization from another brand.

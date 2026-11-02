@@ -1,30 +1,36 @@
-# Estado observado em 2026-11-02
+# Observed state — 2026-11-02
 
-## Snapshot verificável
+## Verifiable source snapshot
 
-- Repositório: `diogosax/unihub-web`.
-- Branch-base: `main`.
-- Commit inspecionado: [`1cc1ffd3cf41`](https://github.com/diogosax/unihub-web/commit/1cc1ffd3cf417b5c522baf9ddc56b04d33c3c5c1).
-- Inspeção: arquivos versionados e documentação, sem deploy, execução de aplicação ou validação em produção.
+- Repository: `diogosax/unihub-web`.
+- Base branch: `main`.
+- Inspected source commit: [`1cc1ffd3cf41`](https://github.com/diogosax/unihub-web/commit/1cc1ffd3cf417b5c522baf9ddc56b04d33c3c5c1).
+- Inspection scope: tracked files and documentation, without application execution, deployment or production validation.
+- The source commit predates the knowledge-base commits. Do not assume it is always the immediate parent of the current HEAD after documentation revisions.
 
-## O que foi observado
+## Observations
 
-Aplicação Next.js em src; README registra migração de Duda e uso de backup como referência. O backup não está presente no snapshot GitHub inspecionado; existe material local que deve ser reconciliado se necessário.
+Next.js application in src. README records a migration from Duda and reference-only use of its backup. That backup is absent from the inspected GitHub snapshot; reconcile available local material when relevant.
 
-Pastas técnicas de primeiro nível observadas: `public/`, `src/`.
+Observed first-level technical directories: `public/`, `src/`.
 
-## Fontes prioritárias
+## Priority sources
 
 - [`README.md`](../../README.md)
 - [`src/app/page.tsx`](../../src/app/page.tsx)
 
-## Lacunas e verificação pendente
+## Gaps and pending checks
 
-- Revalidar branch e alterações locais antes de continuar; este snapshot não acompanha automaticamente mudanças futuras.
-- Fluxos reais, infraestrutura ativa, DNS, credenciais e clientes não foram auditados.
-- Avaliar cada capacidade contra código + testes + evidência operacional atual, especialmente quando README e incrementos divergem.
-- Comparar branches/PRs abertos antes de concluir que falta implementação. O inventário desta base usa a branch-base, não todas as branches.
+- Recheck branch and local changes before resuming; this snapshot does not automatically track later work.
+- Live workflows, active infrastructure, DNS, credentials and customers were not audited.
+- Assess each capability against code, relevant tests and current operational evidence, especially where historical README passages and later increments differ.
+- Compare relevant branches and open PRs before concluding that implementation is missing. This inventory covers the recorded base branch, not every branch.
+- inventory.json indexes documentation and package manifests; it is not the product's asset inventory.
 
-## Resultado desta entrega
+## Fresh-conversation comprehension test
 
-Base de contexto e adaptadores de leitura preparados. Nenhuma funcionalidade do produto foi alterada. Prioridade de desenvolvimento entre projetos ainda será decidida com o proprietário.
+Not yet performed for this project. The KeepsAlive workspace test does not validate this repository.
+
+## This delivery
+
+Shared technical context and assistant entry points are in English. Existing historical/project instructions are preserved. No product functionality was changed. Development priority across projects remains an owner decision.
