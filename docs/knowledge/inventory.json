@@ -1,0 +1,29 @@
+{
+  "repository": "diogosax/unihub-web",
+  "base_branch": "main",
+  "source_commit": "1cc1ffd3cf417b5c522baf9ddc56b04d33c3c5c1",
+  "inspected_on": "2026-11-02",
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "0ca6420847df511eb3e0f97de8e18e401c6177ef21aba47716fb187fc46c968f"
+    }
+  ],
+  "packages": {
+    "package.json": {
+      "name": "unihub-web",
+      "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint"
+      },
+      "dependencies": {
+        "lucide-react": "^0.577.0",
+        "next": "16.1.6",
+        "react": "19.2.3",
+        "react-dom": "19.2.3"
+      }
+    }
+  }
+}
